@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    color: #1f2a44;
+    line-height: 1.5;
+    background: #fff;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px max(20px, calc((100% - 1100px) / 2)) 0;
+    background: #0b2a6f;
+}
+
+.cabecera .titulo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    text-decoration: none;
+}
+.cabecera ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.items {
+    list-style: none;
+}
+
+.cuadrotext {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.items-btn {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.btn-infomación {
+    display: inline-block;
+    background: #ffa90a;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 7px 17px;
+    border-radius: 4px;
+}
+
+
+.parte1 {
+    background: linear-gradient(105deg, #0b2a6f 55%, #1d4ed8 100%);
+    padding: 50px max(20px, calc((100% - 1100px) / 2)) 170px;
+}
+
+.titulo-cuerpo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 60px;
+    align-items: center;
+}
+
+.titulo-cuerpo .titulo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.15;
+    font-weight: bold;
+}
+
+.subtitulo1 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    max-width: 600px;
+}
+
+.espacio {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.panel {
+    background: #fff;
+    border-top: 4px solid #ffa90a;
+    border-radius: 4px;
+    padding: 60px 50px;
+    max-width: none;
+}
+
+.panel h2 {
+    margin: 0 0 8px;
+    font-size: 40px;
+    color: #0b2a6f;
+}
+
+.panel ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 20px;
+    color: #1f2a44;
+}
+
+
+.parte2 {
+    padding: 60px max(20px, calc((100% - 1100px) / 2));
+    background: #fff;
+}
+
+.titulo-cuerpo2 {
+    margin: 0 0 6px;
+    font-size: 40px;
+    color: #0b2a6f;
+}
+
+.subtitulo2 {
+    margin: 0 0 28px;
+    font-size: 20px;
+    color: #5b6478;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.cuadrotexto {
+    background: #fff;
+    border: 1px solid #d9e0f0;
+    border-left: 3px solid #1d4ed8;
+    border-radius: 6px;
+    padding: 16px;
+    height: 250px;
+    width: 300px;
+}
+
+.cuadrotexto h3 {
+    margin: 0 0 40px;
+    font-size: 20px;
+    color: #0b2a6f;
+}
+
+.cuadrotexto p {
+    margin: 0;
+    font-size: 18px;
+    color: #5b6478;
+}
+
+
+.seccion {
+    padding: 60px;
+}
+h2{
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+}
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.caja-beneficio {
+  flex: 1 1 280px;
+  background-color: #ffffff;
+  border-top: 4px solid #0d6efd; 
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.caja-beneficio:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 20px rgba(13, 110, 253, 0.12);
+}
+
+.icono-beneficio {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.text{
+    font-size: 25px;
+}
+.title{
+    margin: 0 0 6px;
+    font-size: 40px;
+    color: #0b2a6f;
+}
+.btn {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.btn-cursos {
+    display: inline-block;
+    background: #ffa90a;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 7px 17px;
+    border-radius: 4px;
+}
+.subtitle{
+    font-size: 20px;
+    margin: 0;
+}
+
+.titulocar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#carreras {
+    background: #f4f6fb;
+    padding: 60px 0;
+}
+
+#carreras .container {
+    max-width: 1100px;
+}
+
+.grid-carreras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-block: 30px;
+}
+
+.tarjeta-carrera {
+    --color: #0d6efd;
+    background-color: #ffffff;
+    border: 0;                                 
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(11, 42, 111, 0.15);
+    padding: 24px;
+    text-align: left;
+}
+
+
+.tarjeta-carrera .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tarjeta-carrera .años {
+    color:#fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+
+.tarjeta-carrera h5 {
+    margin: 0;
+    font-size: 22px;
+    color: #1f2a44;
+}
+
+.tarjeta-carrera p {
+    margin: 0;
+    font-size: 17px;
+    color: #5b6478;
+}
+
+h5{
+    font-size: 25px;
+    font-weight: bold;
+}
+.años{
+    background-color: #0d6efd;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+
+.pie {
+    background: #0b2a6f;
+    color: #fff;
+    padding: 40px 0 24px;
+}
+
+.pie .container {
+    max-width: none;
+    padding: 0 max(20px, calc((100% - 1100px) / 2));
+}
+
+.pie-pag {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.pie h4 {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.pie p {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    color: #bcd4ff;
+}
+
+.pie address {
+    font-style: normal;
+}

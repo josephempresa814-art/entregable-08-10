@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar información | EducLima</title>
+    <meta name="description" content="Solicita información sobre nuestras carreras técnicas en EducLima">
+    <link rel="stylesheet" href="solicitud.css">
+</head>
+
+<body class="pagina-solicitar">
+    <div class="tamañohoja">
+        <header class="cabecera">
+            <a class="titulo" href="index.html">EducLima</a>
+            <ul>
+                <div class="nav-links">
+                    <li class="items"><a class="cuadrotext" href="index.html">Inicio</a></li>
+                    <li class="items"><a class="cuadrotext" href="#">Nosotros</a></li>
+                    <li class="items"><a class="cuadrotext" href="#">Ofertas</a></li>
+                    <li class="items"><a class="cuadrotext" href="#">Contactanos</a></li>
+                </div>
+            </ul>
+        </header>
+
+        <main>
+            <!-- Portada de la página -->
+            <section class="sol-portada">
+                <h1>Solicita información en 2 minutos</h1>
+                <p>Elige tu carrera, tu turno y déjanos tus datos. Un asesor te llamará esta semana.</p>
+            </section>
+
+            <section class="sol-principal">
+                <div class="sol-grid">
+
+                    <!-- Formulario -->
+                    <div class="sol-tarjeta" id="zonaFormulario">
+                        <form id="formulario" novalidate>
+
+                            <fieldset class="bloque">
+                                <legend><span class="bloque-num">1</span> Elige tu carrera</legend>
+                                <div class="programas">
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Desarrollo de Software" data-detalle="Aprende a crear páginas web y aplicaciones.">
+                                        <span class="opcion-cuerpo"><strong>Desarrollo de Software</strong><small>Páginas web y aplicaciones</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Administración de Empresas" data-detalle="Aprende a organizar y dirigir un negocio.">
+                                        <span class="opcion-cuerpo"><strong>Administración de Empresas</strong><small>Gestión y negocios</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Electricidad Industrial" data-detalle="Aprende a instalar y mantener sistemas eléctricos.">
+                                        <span class="opcion-cuerpo"><strong>Electricidad Industrial</strong><small>Instalaciones y mantenimiento</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Mecánica Automotriz" data-detalle="Aprende a diagnosticar y reparar vehículos.">
+                                        <span class="opcion-cuerpo"><strong>Mecánica Automotriz</strong><small>Diagnóstico y reparación</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Diseño Gráfico" data-detalle="Aprende a diseñar logos, afiches y contenido digital.">
+                                        <span class="opcion-cuerpo"><strong>Diseño Gráfico</strong><small>Imagen y contenido digital</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="programa" value="Contabilidad" data-detalle="Aprende a llevar las cuentas y los impuestos de una empresa.">
+                                        <span class="opcion-cuerpo"><strong>Contabilidad</strong><small>Cuentas e impuestos</small></span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="bloque">
+                                <legend><span class="bloque-num">2</span> Elige tu turno</legend>
+                                <div class="turnos">
+                                    <label class="opcion">
+                                        <input type="radio" name="turno" value="Mañana" data-horario="7:00 a. m. a 12:00 m.">
+                                        <span class="opcion-cuerpo"><strong>Mañana</strong><small>7:00 a. m. a 12:00 m.</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="turno" value="Tarde" data-horario="1:00 p. m. a 6:00 p. m.">
+                                        <span class="opcion-cuerpo"><strong>Tarde</strong><small>1:00 p. m. a 6:00 p. m.</small></span>
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" name="turno" value="Noche" data-horario="6:30 p. m. a 10:30 p. m.">
+                                        <span class="opcion-cuerpo"><strong>Noche</strong><small>6:30 p. m. a 10:30 p. m.</small></span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="bloque">
+                                <legend><span class="bloque-num">3</span> Déjanos tus datos</legend>
+
+                                <div class="campo">
+                                    <label for="nombre">Nombre completo</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Torres Quispe" autocomplete="name">
+                                    <span class="error" id="error-nombre"></span>
+                                </div>
+
+                                <div class="campo-doble">
+                                    <div class="campo">
+                                        <label for="dni">DNI</label>
+                                        <input type="text" id="dni" name="dni" inputmode="numeric" maxlength="8" placeholder="8 números">
+                                        <span class="error" id="error-dni"></span>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="celular">Celular</label>
+                                        <input type="text" id="celular" name="celular" inputmode="numeric" maxlength="9" placeholder="Ej: 987654321" autocomplete="tel">
+                                        <span class="error" id="error-celular"></span>
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="correo">Correo electrónico</label>
+                                    <input type="email" id="correo" name="correo" placeholder="Ej: ana@correo.com" autocomplete="email">
+                                    <span class="error" id="error-correo"></span>
+                                </div>
+                            </fieldset>
+
+                            <button type="submit" class="btn-enviar" id="btnEnviar">Enviar solicitud</button>
+                            <p class="aviso" id="avisoFormulario"></p>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Mensaje final (oculto hasta enviar) -->
+                <div class="sol-tarjeta exito" id="zonaExito" hidden>
+                    <div class="exito-icono"></div>
+                    <h2>¡Solicitud enviada!</h2>
+                    <p id="exitoTexto"></p>
+                    <p class="exito-codigo">Tu código de solicitud: <strong id="exitoCodigo"></strong></p>
+                    <div class="exito-botones">
+                        <a href="index.html" class="btn-enviar btn-link">Volver al inicio</a>
+                        <button type="button" class="btn-secundario" id="btnNueva">Hacer otra solicitud</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <div class="container">
+                <div class="pie-pag">
+                    <div>
+                        <h4>Instituto Superior TecnoLima</h4>
+                        <p>Formación técnica con enfoque práctico para quienes quieren empezar a trabajar en su carrera.</p>
+                    </div>
+                    <address>
+                        <h4>Contacto</h4>
+                        <p class="mb-1">Av. Siempre Viva 123, Lima</p>
+                        <p class="mb-1">(01) 555 0123</p>
+                        <p class="mb-0">admision@tecnolima.edu.pe</p>
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="solicitar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/* ===== Página: Solicitar información =====
+   Usa los mismos colores de estilos.css:
+   azul oscuro #0b2a6f, azul #1d4ed8, naranja #ffa90a, fondo claro #eaf0ff */
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px max(40px, calc((100% - 1200px) / 2)) 0;
+    background: #0b2a6f;
+}
+
+.cabecera .titulo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    text-decoration: none;
+}
+.cabecera ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.cuadrotext {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.items {
+    list-style: none;
+}
+
+/* ---------- Portada ---------- */
+.sol-portada {
+    background: linear-gradient(105deg, #0b2a6f 55%, #1d4ed8 100%);
+    padding: 40px max(20px, calc((100% - 1100px) / 2)) 60px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.titulo{
+  text-decoration: none;
+}
+
+
+.sol-principal {
+    background: #eaf0ff;
+    padding: 0 max(20px, calc((100% - 1100px) / 2)) 60px;
+    
+}
+
+.sol-tarjeta {
+    background: #fff;
+    border: 1px solid #d9e0f0;
+    border-radius: 6px;
+    padding: 30px;
+    width: 1200px;
+}
+
+/* ---------- Bloques del formulario ---------- */
+.bloque {
+    border: 0;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.bloque legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0b2a6f;
+    padding: 20px;
+}
+
+.bloque-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    color: #fff;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.turnos {
+    padding-top: 14;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.opcion {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.opcion input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    cursor: pointer;
+}
+
+.opcion-cuerpo {
+    display: block;
+    height: 100%;
+    padding: 14px 14px 14px 16px;
+    background: #fff;
+    border: 1px solid #d9e0f0;
+    border-left: 3px solid #d9e0f0;
+    border-radius: 6px;
+    transition: transform 0.15s, border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.opcion-cuerpo strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #0b2a6f;
+}
+
+.opcion-cuerpo small {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.8rem;
+    color: #5b6478;
+}
+
+.opcion input:checked + .opcion-cuerpo {
+    background: #eaf0ff;
+    border-color: #1d4ed8;
+    border-left-color: #ffa90a;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.campo {
+    margin-bottom: 12px;
+}
+
+.campo-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.campo input {
+    width: 100%;
+    padding: 11px 12px;
+    font: inherit;
+    font-size: 0.9rem;
+    color: #1f2a44;
+    background: #fff;
+    border: 1px solid #b9c4de;
+    border-radius: 4px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+}
+
+.campo input.ok {
+    border-color: #1a8f4c;
+}
+
+.campo input.mal {
+    border-color: #c62828;
+}
+
+.error {
+    display: block;
+    min-height: 1.1em;
+    margin-top: 3px;
+    font-size: 0.78rem;
+    color: #c62828;
+}
+.btn-enviar {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 20px;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    color: #0b2a6f;
+    background: #ffa90a;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 169, 10, 0.45);
+}
+
+.btn-enviar:focus-visible,
+.btn-secundario:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 2px;
+}
+
+.btn-secundario {
+    padding: 13px 20px;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0b2a6f;
+    background: #fff;
+    border: 2px solid #0b2a6f;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    background: #eaf0ff;
+}
+
+.aviso {
+    min-height: 1.2em;
+    margin: 10px 0 0;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #c62828;
+}
+
+.exito {
+    max-width: 560px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.exito[hidden] {
+    display: none;
+}
+
+.exito-icono {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #1a8f4c;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 64px;
+    animation: aparece 0.5s ease;
+}
+
+.exito h2 {
+    margin: 0 0 8px;
+    color: #0b2a6f;
+}
+
+.exito p {
+    margin: 0 0 10px;
+    color: #1f2a44;
+}
+
+.exito-codigo {
+    padding: 10px;
+    background: #eaf0ff;
+    border-radius: 4px;
+}
+
+.exito-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.exito-botones .btn-enviar {
+    flex: 1;
+}
+
+.exito-botones .btn-secundario {
+    flex: 1;
+}
+
+
+.programas, .turnos, .campo-doble {
+    grid-template-columns: 1fr;
+}
+
+.sol-portada h1 {
+    font-size: 1.7rem;
+}
+
+.exito-botones {
+    flex-direction: column;
+}
+
+.pie {
+    background: #0b2a6f;
+    color: #0b2a6f;
+    padding: 40px 0 24px;
+}
+
+.pie .container {
+    max-width: none;
+    padding: 0 max(20px, calc((100% - 1100px) / 2));
+}
+
+.pie-pag {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    background-color: #0b2a6f;
+}
+
+.pie h4 {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.pie p {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    color: #bcd4ff;
+}
+
+.pie address {
+    font-style: normal;
+}
